@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcom</title>
+    <style>
+        a,input{
+            display: block; margin: auto; text-align: center; text-decoration: none; background-color: rgb(218, 240, 236); width: 10rem;
+        margin-top:1rem ;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://127.0.0.1:3331/room" >Creat Room</a>
+    <input type="text" placeholder="put id home for join">
+    <input type="button" value="join room ">
+    <script>
+let btn=document.querySelector("[type='button']");
+const room = document.querySelector("[placeholder='put id home for join']");
+room.addEventListener("keypress", function(e) {
+if(e.key==="Enter"){
+    if(null!=room.value!=''){
+        window.location.href = room.value;
+            console.log(room.value)
+
+    }
+}
+});
+btn.addEventListener('click', function(){
+    if(null!=room.value!=''){
+        window.location.href = room.value;
+            console.log(room.value)
+
+    }
+
+
+})
+room.addEventListener('click', function(){
+   navigator.clipboard.readText("")
+   console.log('wss')
+})
+    </script>
+</body>
+</html>
